@@ -2,16 +2,10 @@
 <html lang="ko">
 <head>
     <script src="top-btn.js" defer></script>
-    <style>
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>손재성 포트폴리오</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-
-    /* 방문자/인사문구 박스는 section 스타일만 적용 (추가 스타일 없음) */
-    </style>
 </head>
 <body>
     <button id="top-btn" title="맨 위로"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -55,7 +49,7 @@
                     <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
-                        <li>JavaScript</li>
+                        <li>JavaScript (ES6+)</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -104,77 +98,8 @@
     <footer class="footer">
         © 2025 손재성. All rights reserved.
     </footer>
+    <script src="typing.js" defer></script>
+    <script src="visitor.js" defer></script>
+    <script src="fadein.js" defer></script>
 </body>
-<script>
-// 타이핑 애니메이션 함수
-function typeText(element, text, speed = 45, callback) {
-    let i = 0;
-    function typing() {
-        if (i <= text.length) {
-            element.innerHTML = text.slice(0, i) + '<span class="cursor">|</span>';
-            i++;
-            setTimeout(typing, speed);
-        } else {
-            element.innerHTML = text;
-            if (callback) callback();
-        }
-    }
-    typing();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    // 방문자 카운터 (localStorage 기반)
-    let count = localStorage.getItem('visit_count');
-    if (!count) count = 0;
-    count = parseInt(count) + 1;
-    localStorage.setItem('visit_count', count);
-    document.getElementById('visitor-counter').textContent = `방문자 수: ${count}회`;
-
-    // 랜덤 인사 메시지(무구)
-    const greetings = [
-        '오늘도 멋진 하루 보내세요!',
-        '방문해주셔서 감사합니다 :)',
-        '코딩은 즐거움입니다!',
-        '함께 성장하는 개발자가 되겠습니다.',
-        '새로운 도전을 응원합니다!',
-        '포트폴리오에 오신 걸 환영합니다!',
-        '좋은 인연이 되길 바랍니다.',
-        '행복한 하루 되세요!',
-        '배움에는 끝이 없습니다.',
-        '당신의 꿈을 응원합니다!'
-    ];
-    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-    // 소개 타이핑 효과
-    const aboutTitle = '안녕하세요! 꿈꾸는 개발자 손재성입니다.';
-    const aboutDesc = 'U1대학교 AI소프트웨어 학과에 재학 중인 25세 손재성입니다.<br>웹 개발, 데이터베이스, 인공지능 등 다양한 분야에 관심을 가지고 있습니다.';
-    typeText(document.getElementById('about-typing'), aboutTitle, 55, () => {
-        setTimeout(() => {
-            typeText(document.getElementById('about-desc-typing'), aboutDesc, 18);
-        }, 350);
-    });
-
-    // 인사 메시지 타이핑 효과
-    setTimeout(() => {
-        typeText(document.getElementById('greeting'), greeting, 38);
-    }, 1200);
-
-    // Fade-in 효과
-    document.querySelectorAll('.section').forEach((el, i) => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(40px)';
-        setTimeout(() => {
-            el.style.transition = 'opacity 1.1s cubic-bezier(.4,2,.3,1), transform 1.1s cubic-bezier(.4,2,.3,1)';
-            el.style.opacity = 1;
-            el.style.transform = 'translateY(0)';
-        }, 200 + i * 180);
-    });
-});
-
-// 타이핑 커서 스타일
-const style = document.createElement('style');
-style.innerHTML = `.cursor { display:inline-block; width:1ch; color:#4fd1c5; animation:blink 1s steps(1) infinite; }
-@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }`;
-document.head.appendChild(style);
-</script>
 </html>
