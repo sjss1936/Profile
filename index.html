@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="top-btn.js" defer></script>
+    <script src="typing.js" defer></script>
+    <script src="visitor.js" defer></script>
+    <script src="fadein.js" defer></script>
+    <script src="top-btn.js" defer></script>
+    <style>
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>손재성 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    /* 방문자/인사문구 박스는 section 스타일만 적용 (추가 스타일 없음) */
+    </style>
+</head>
+<body>
+    <button id="top-btn" title="맨 위로"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="neon-bar left"></div>
+    <div class="neon-bar right"></div>
+    <div class="aurora-bg">
+        <div class="aurora"></div>
+    </div>
+    <nav class="navbar glow-nav">
+        <div class="nav-container">
+            <span class="nav-logo">손재성PROFILE</span>
+            <ul class="nav-links">
+                <li><a href="#about">소개</a></li>
+                <li><a href="#skills">기술 스택</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main style="position:relative; z-index:1;">
+        <section id="about" class="section about">
+            <!-- 프로필 사진/소개 ... -->
+            <div class="profile-img">
+                <img src="img/profile.jpg" alt="프로필 사진">
+            </div>
+            <div class="about-content">
+                <h2 id="about-typing"></h2>
+                <p id="about-desc-typing"></p>
+
+            </div>
+        </section>
+        <section id="visitor-greeting-box" class="section">
+            <div id="visitor-counter">방문자 수: 0회</div>
+            <div id="greeting">오늘도 멋진 하루 보내세요!</div>
+        </section>
+        <section id="skills" class="section skills">
+        <section id="portfolio" class="section portfolio">
+            <h2>포트폴리오</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <a href="https://sjss1936.github.io/Mac/" target="_blank" style="display:block;">
+                        <img src="img/mac.jpeg" alt="Mac 프로젝트" style="width:100%;max-width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);margin-bottom:12px;">
+                    </a>
+                    <h3>Mac 클론 웹사이트</h3>
+                    <p>Apple Mac 공식 홈페이지를 React로 클론.<br>반응형 UI, 컴포넌트 구조, 애니메이션 구현.</p>
+                </div>
+                <div class="portfolio-card">
+                    <a href="https://sjss1936.github.io/nike/" target="_blank" style="display:block;">
+                        <img src="img/nike.jpeg" alt="Nike 프로젝트" style="width:100%;max-width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);margin-bottom:12px;">
+                    </a>
+                    <h3>Nike 쇼핑몰 클론</h3>
+                    <p>Nike 공식 쇼핑몰을 HTML/CSS/JS로 클론.<br>상품 리스트, 상세, 장바구니, 반응형 UI.</p>
+                </div>
+                <div class="portfolio-card">
+                    <a href="https://sjss1936.github.io/qwer/" target="_blank" style="display:block;">
+                        <img src="img/qwer.jpeg" alt="Qwer 프로젝트" style="width:100%;max-width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);margin-bottom:12px;">
+                    </a>
+                    <h3>Qwer 커뮤니티</h3>
+                    <p>간단한 게시판/커뮤니티 웹앱.<br>글 작성, 댓글, 좋아요, 기본 CRUD 기능 구현.</p>
+                </div>
+            </div>
+        </section>
+            <h2>기술 스택</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>프론트엔드</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>백엔드</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        © 2025 손재성. All rights reserved.
+    </footer>
+</body>
+<script>
+</script>
+</html>
